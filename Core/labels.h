@@ -52,5 +52,12 @@ float t_at_display = 0;
 U8G2_SH1107_128X128_F_HW_I2C u8g2(U8G2_R0, /* reset=*/ 8);
 DHT temp_sensor(DHTPIN, DHTTYPE);
 
+// Door switch
+const int buzzerPin = 8;
+const int interruptPin = 3;
+volatile bool state_door = LOW;
+const int check_pin = A0;
+unsigned long time_pressed;
+int state_of_switch;
 
 #endif

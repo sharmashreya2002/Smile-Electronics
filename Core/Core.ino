@@ -22,7 +22,9 @@ float time_remaining_function();
 
 void state_machine();
 
+void Switch1();
 
+void timer_buzzer();
 
 
 void setup() {
@@ -43,6 +45,11 @@ void setup() {
   Qaccum = find_Qaccum(heat_loss_rate);
   Qleft = find_Q_left(Qaccum, Q_total);
   t_left = remaining_cool_life(Qleft, Qaccum, heat_loss_rate);
+
+  // Set up door switch
+  pinMode(interruptPin, INPUT_PULLUP);
+  pinMode(buzzerPin, OUTPUT);
+  attachInterrupt(digitalPinToInterrupt(interruptPin), Switch1, CHANGE); 
 }
 
 
@@ -61,6 +68,10 @@ void loop(){
     display_state_machine();
    
     }
+  // Check door
+  if(state_door == LOW){  
+    timer_buzzer();
 
  }
+}
     

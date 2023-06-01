@@ -20,6 +20,7 @@ int t = 5 * 60;// Time interval between temperature measurements (convert from m
 float Qaccum;
 float Qleft;
 float heat_loss_rate;
+float error_margin;
 //float cool_life;
 
 

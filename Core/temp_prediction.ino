@@ -32,7 +32,7 @@ float time_remaining_function() {
   heat_loss_rate = find_HLR(T);
   Qaccum = find_Qaccum(heat_loss_rate);
   Qleft = find_Q_left(Qaccum, Qleft);
-  t_left = remaining_cool_life(Qleft, Qaccum, heat_loss_rate);
+  t_left = remaining_cool_life(Qleft, Qaccum, heat_loss_rate) - error_margin;
 
 
 }

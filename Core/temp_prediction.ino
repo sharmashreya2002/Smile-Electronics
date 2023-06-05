@@ -1,5 +1,4 @@
-
-
+//Shreya
 
 // Calculate instantaneous heat loss rate (W)
 float find_HLR(float Tmeasured) {
@@ -35,4 +34,8 @@ float time_remaining_function() {
   t_left = remaining_cool_life(Qleft, Qaccum, heat_loss_rate) - error_margin;
 
 
+}
+
+float find_chamber_temp(float heat_loss_rate){
+  return heat_loss_rate*Rth_2*1.6;
 }

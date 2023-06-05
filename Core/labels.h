@@ -1,4 +1,4 @@
-//May
+
  #ifndef _labels_H
 #define _labels_H
 
